@@ -23,4 +23,5 @@ Screenshot mendukung adanya rancangan UI Gemini, tetapi tidak membuktikan Submit
 3. Pengujian kondisi tidak seimbang dan pencatatan end-to-end setelah kode ditinjau.
 4. Hasil NotebookLM beserta daftar sumber dan kutipan yang dapat diperiksa.
 
-Status: bukti visual penggunaan Gemini diterima; tinjauan kode dan integrasi belum selesai.
+Status catatan ini: tinjauan awal berdasarkan screenshot. Pembaruan: pengguna telah mengirim kode dan prompt aktual, dan kode sudah ditinjau serta diperbaiki. Lihat docs/gemini-review.md untuk temuan definitif, hasil build, serta pengujian. Pengujian login/browser end-to-end masih diperlukan.
+

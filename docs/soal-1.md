@@ -60,4 +60,4 @@ Auditor dapat menelusuri satu bukti melalui header ke seluruh baris dan akun, me
 
 ## Status validasi
 
-Ditinjau terhadap persyaratan soal dan dokumentasi PostgreSQL. Belum dieksekusi pada PostgreSQL; lingkungan kerja belum memiliki server/klien PostgreSQL. Pengujian integrasi dan concurrency perlu dilakukan pada database tugas sebelum dinyatakan lulus.
+DDL dan pengamanan posting sudah dipasang pada PostgreSQL Supabase 17.11. Pengujian posting dan akses pengguna terdokumentasi pada docs/hasil-pengujian.md; skrip terbaru pada tests/03_backend_tests.sql. Verifikasi browser/login nyata masih diperlukan.

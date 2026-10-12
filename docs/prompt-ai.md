@@ -1,14 +1,14 @@
 # Prompt dan bukti AI
 
-Status: prompt berikut belum dijalankan di Gemini Canvas atau NotebookLM. Bagian respons sengaja belum diisi. Dokumentasi ini adalah persiapan, bukan bukti penggunaan.
+Status: pengguna telah menjalankan prompt Gemini Canvas dan mengirim kode TSX asli serta tiga screenshot. Pengguna mengonfirmasi prompt aktual pada 13 Oktober 2026 Asia/Jakarta. NotebookLM belum dijalankan. Bukti asli dan tinjauan perbaikan tercantum pada evidence/gemini/ dan docs/gemini-review.md.
 
 ## Gemini Canvas
 
-Prompt yang akan digunakan:
+Prompt aktual yang digunakan pengguna:
 
 > Buat dan tampilkan prototipe formulir Voucher Kas Keluar berbasis React dalam bahasa Indonesia. Form memiliki tanggal, nomor bukti, deskripsi, dan baris jurnal dinamis: akun, debit, kredit. Akun master: Kas, Bank, Persediaan, Utang Usaha, HPP, Beban Operasional. Hitung total secara langsung dengan aritmetika sen integer, jangan floating point untuk uang. Submit hanya aktif jika minimal dua baris, tiap baris memiliki tepat satu nominal positif, total debit sama dengan kredit dan lebih dari nol, tepat satu baris akun Kas/Bank di kredit, serta akun lawan di debit. Tambahkan indikator balance yang aksesibel dan pesan error. Gunakan tampilan bersih bernuansa hijau, responsif. Backend Supabase RPC submit_cash_voucher menerima p_date, p_reference, p_description, p_lines; setiap baris berisi account_id, debit, credit sebagai string desimal. Jangan gunakan service_role key atau mengklaim koneksi database sudah berhasil. Jelaskan keputusan validasi dan batasan form.
 
-Setelah dijalankan: catat tanggal, prompt aktual jika diedit, respons, tautan/bukti Canvas, dan perubahan yang diadopsi. Bandingkan kode Canvas dengan frontend/app.mjs; jangan mengganti pengamanan backend dengan validasi frontend.
+Tautan yang diberikan pengguna: https://share.gemini.google/cZaKYyU3zw8W. Isi tautan belum dapat diakses dari sesi ini. Kode hasil asli: evidence/gemini/original.tsx. Screenshot preview dan ringkasan respons: evidence/gemini/. Versi perbaikan: frontend-canvas/CashVoucherApp.tsx. Keputusan perubahan: docs/gemini-review.md. Waktu persis eksekusi Gemini tidak ditampilkan dalam bukti; tanggal pada form merupakan tanggal transaksi contoh.
 
 ## NotebookLM
 

@@ -22,6 +22,9 @@ Database: Supabase proyek uts-pengkodean, PostgreSQL 17.11. Hasil di bawah beras
 | JavaScript frontend | Lulus node --check |
 | Advisor keamanan | Tidak ada warning pada hasil terakhir; 2 info tabel stok RLS tanpa policy karena akses aplikasi masih ditutup |
 | Login dan UI browser | Belum diuji end-to-end |
-| Gemini Canvas / NotebookLM | Belum dijalankan |
+| Gemini Canvas | Kode asli dan 3 screenshot diterima; versi perbaikan lulus build esbuild/Tailwind serta tes nominal dan aturan voucher |
+| NotebookLM | Belum dijalankan |
+| Suite tests/03_backend_tests.sql | Lulus: balance, rollback, reversal, checksum, audit, akses antar pengguna dan penolakan akses anonim |
+| Pengguna Supabase Auth aplikasi | Belum tersedia saat diperiksa; login end-to-end masih menunggu pengguna aplikasi |
 
 Uji RACE01 memakai dua permintaan konektor bersamaan dan penundaan singkat, tetapi waktu mulai sesi tidak terjamin. Hasil mendukung pencegahan overselling; bukti bahwa sesi benar-benar menunggu lock dan skenario rollback perlu diulang dengan dua koneksi terkontrol mengikuti tests/02_concurrency.md.

@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {parseToCents,decimalString,journalTotals,validateVoucher} from '../frontend-canvas/canvas-model.mjs';
+const accounts=[{id:'1',is_cash:true},{id:'2',is_cash:false},{id:'3',is_cash:false}];
+const metadata={date:'2026-10-13',reference:'VKK-001',description:'Test'};
+const lines=[{account_id:'2',debit:'5000000',credit:'0'},{account_id:'1',debit:'0',credit:'5000000'}];
+assert.equal(parseToCents('5000000'),500000000n);
+assert.equal(decimalString('5000000'),'5000000.00');
+assert.equal(decimalString('0.10'),'0.10');
+assert.equal(parseToCents('-100'),null);
+assert.equal(parseToCents('1.234'),null);
+assert.equal(parseToCents('1,000'),null);
+assert.equal(parseToCents('abc100'),null);
+assert.equal(journalTotals(lines).balanced,true);
+assert.equal(validateVoucher(lines,accounts,metadata).isValid,true);
+assert.equal(validateVoucher(lines,accounts,{...metadata,reference:''}).isValid,false);
+assert.equal(validateVoucher([...lines,{account_id:'3',debit:'0',credit:'0'}],accounts,metadata).isValid,false);
+// Jurnal balanced tetapi kas tambahan di debit dan akun lawan di kredit harus ditolak.
+assert.equal(validateVoucher([...lines,{account_id:'1',debit:'100',credit:'0'},{account_id:'3',debit:'0',credit:'100'}],accounts,metadata).isValid,false);
+assert.equal(validateVoucher([{...lines[0],account_id:'unknown'},lines[1]],accounts,metadata).isValid,false);
+assert.equal(journalTotals([{account_id:'2',debit:'0.10',credit:'0'},{account_id:'3',debit:'0.20',credit:'0'},{account_id:'1',debit:'0',credit:'0.30'}]).balanced,true);
+console.log('PASS Canvas amount conversion, precision, validation and payload tests');

@@ -1,0 +1,13 @@
+{
+  "name":"uts-pengkodean",
+  "version":"0.1.0",
+  "private":true,
+  "type":"module",
+  "scripts":{
+    "build":"tailwindcss -i frontend-canvas/style.css -o dist/canvas.css --minify && node scripts/build-canvas.mjs",
+    "test":"node tests/money.test.mjs && node tests/canvas.test.mjs",
+    "preview":"python3 -m http.server 8000 --directory dist"
+  },
+  "dependencies":{"react":"19.2.0","react-dom":"19.2.0","lucide-react":"1.55.0"},
+  "devDependencies":{"esbuild":"0.28.2","tailwindcss":"3.4.17"}
+}

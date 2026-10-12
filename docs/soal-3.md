@@ -4,7 +4,7 @@
 
 Prototipe frontend React terdapat pada frontend/. Form memuat tanggal, nomor bukti, deskripsi, dan baris akun yang dapat ditambah/dihapus. Total debit/kredit dihitung langsung; Submit hanya aktif jika minimal dua baris, nominal valid, total debit = kredit > 0, satu akun kas/bank di kredit dan akun lawan di debit. Nominal frontend dihitung dalam sen menggunakan BigInt untuk menghindari selisih floating point. Database memakai NUMERIC dan tetap memvalidasi semua input, sehingga bypass frontend tidak menghilangkan pemeriksaan.
 
-Frontend saat ini dibuat dalam sesi pengerjaan ini, BELUM melalui Gemini Canvas. Penggunaan Gemini Canvas dan NotebookLM belum dilakukan. Prompt siap pakai tersedia pada docs/prompt-ai.md; hasil nyata dan sumber yang digunakan harus dilampirkan sebelum jawaban final dikumpulkan. Jangan menganggap bagian ini sudah memenuhi persyaratan orkestrasi AI.
+Pengguna telah membuat rancangan melalui Gemini Canvas menggunakan prompt aktual pada docs/prompt-ai.md. Output TSX dan screenshot disimpan pada evidence/gemini/. Form utama hasil Canvas dan perbaikan integrasinya berada pada frontend-canvas/; detail temuan serta perubahan pada docs/gemini-review.md. Frontend sederhana pada frontend/ dibuat dalam sesi coding ini untuk pemeriksaan audit dan pembalik. NotebookLM belum dijalankan sehingga ringkasan verifikasi akuntansi belum tersedia.
 
 ## 3.2 Backend dan pengendalian audit
 
@@ -20,7 +20,9 @@ hash_checksum menggunakan SHA-256 atas JSONB dengan versi format, atribut header
 
 ## Cara menjalankan prototipe
 
-Jalankan `python3 -m http.server 8000 --directory frontend` dari root repo, lalu buka http://localhost:8000. React/React DOM dipatok versi 19.2.0 melalui CDN; memerlukan internet. Tidak menggunakan package manager atau bundler.
+Form utama Canvas: jalankan `npm ci`, `npm run build`, lalu `npm run preview` dari root repo. Buka http://localhost:8000. React/React DOM dipatok 19.2.0, lucide-react 1.55.0, Tailwind CSS 3.4.17, dan esbuild 0.28.2; package-lock.json mencatat resolusi dependensi. Bundle hasil build tidak memerlukan CDN untuk React.
+
+Frontend pemeriksaan audit: jalankan `python3 -m http.server 8001 --directory frontend`, lalu buka http://localhost:8001. Frontend ini memakai CDN React/React DOM 19.2.0 dan membutuhkan internet.
 
 Di Supabase Dashboard, buat pengguna aplikasi lewat Authentication > Users. Akun dashboard Supabase tidak otomatis menjadi pengguna aplikasi. Ambil Publishable key proyek melalui pengaturan API, kemudian masukkan pada form login bersama email/password pengguna aplikasi. Jangan memakai secret/service_role key. Key dan access token hanya disimpan pada state memori halaman. Prototipe tidak melakukan refresh session otomatis; bila token kedaluwarsa, keluar lalu login ulang. Gunakan HTTPS saat dihosting selain localhost.
 
