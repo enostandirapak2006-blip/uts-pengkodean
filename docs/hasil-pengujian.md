@@ -23,7 +23,7 @@ Database: Supabase proyek uts-pengkodean, PostgreSQL 17.11. Hasil di bawah beras
 | Advisor keamanan | Tidak ada warning pada hasil terakhir; 2 info tabel stok RLS tanpa policy karena akses aplikasi masih ditutup |
 | Login dan UI browser | Belum diuji end-to-end |
 | Gemini Canvas | Kode asli dan 3 screenshot diterima; versi perbaikan lulus build esbuild/Tailwind serta tes nominal dan aturan voucher |
-| NotebookLM | Belum dijalankan |
+| NotebookLM | Respons kode final dan screenshot sumber diterima; kutipan dua fungsi cocok dengan kode. Penilaian AI ditinjau manual pada docs/notebooklm-hasil.md |
 | Suite tests/03_backend_tests.sql | Lulus: balance, rollback, reversal, checksum, audit, akses antar pengguna dan penolakan akses anonim |
 | Pengguna Supabase Auth aplikasi | Belum tersedia saat diperiksa; login end-to-end masih menunggu pengguna aplikasi |
 

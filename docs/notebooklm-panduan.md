@@ -23,3 +23,4 @@ Jalankan prompt NotebookLM pada docs/prompt-ai.md. Periksa apakah semua sumber b
 Fokus tinjauan: klasifikasi kas dan setara kas, apakah akun Bank benar-benar memenuhi karakteristik kas, pengeluaran kas dibanding transfer antarkas/nonkas, cakupan prototipe, serta pembedaan ketentuan standar dari kontrol teknis debit-kredit/checksum/immutability. Jangan menyimpulkan kepatuhan penuh hanya dari label is_cash atau keseimbangan jurnal.
 
 Status hasil NotebookLM: belum tersedia. Panduan ini tidak merupakan hasil verifikasi NotebookLM.
+

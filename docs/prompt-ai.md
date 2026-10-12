@@ -1,6 +1,6 @@
 # Prompt dan bukti AI
 
-Status: pengguna telah menjalankan prompt Gemini Canvas dan mengirim kode TSX asli serta tiga screenshot. Pengguna mengonfirmasi prompt aktual pada 13 Oktober 2026 Asia/Jakarta. NotebookLM belum dijalankan. Bukti asli dan tinjauan perbaikan tercantum pada evidence/gemini/ dan docs/gemini-review.md.
+Status: pengguna telah menjalankan Gemini Canvas dan NotebookLM. Prompt Gemini aktual, kode dan screenshot telah diterima. NotebookLM pada pemeriksaan ulang telah membaca notebooklm-kode.txt dan mengutip fungsi yang cocok dengan kode. Bukti kedua layanan berada pada evidence/gemini/ dan evidence/notebooklm/. Ringkasan NotebookLM serta tinjauan manual pada docs/notebooklm-hasil.md.
 
 ## Gemini Canvas
 
@@ -18,4 +18,4 @@ Prompt yang akan digunakan:
 
 > Berdasarkan hanya sumber yang dimasukkan, tinjau logika prototipe Voucher Kas Keluar ini terhadap ketentuan pengakuan dan klasifikasi kas serta setara kas. Untuk setiap kesimpulan, sertakan kutipan sumber/locator yang dapat diperiksa. Periksa definisi kas dan setara kas, batasan instrumen yang memenuhi klasifikasi, arah jurnal kas keluar, penggunaan akun lawan, perlakuan transaksi tanpa perubahan kas, koreksi melalui jurnal pembalik, dan aspek yang tidak bisa dipastikan hanya dari kode. Pisahkan aturan standar akuntansi dari kontrol teknis yang merupakan keputusan desain. Jangan menyatakan bahwa seluruh sistem patuh PSAK hanya karena jurnal seimbang. Buat tabel aturan, bukti kode, hasil memenuhi/belum memenuhi/tidak dapat dinilai, dan rekomendasi.
 
-Setelah dijalankan: simpan daftar sumber, prompt aktual, respons lengkap, ringkasan verifikasi, serta hasil cek manual kutipan. Jika sumber tidak mendukung suatu klaim, beri status belum terverifikasi. Ringkasan verifikasi aktual: BELUM TERSEDIA.
+Pemeriksaan pertama belum membaca kode. Prompt tindak lanjut yang disiapkan pada docs/notebooklm-review-awal.md meminta konfirmasi fungsi dan penilaian kode final. Respons terbaru yang dikirim pengguna telah memenuhi konfirmasi fungsi tersebut; bukti kesamaan seluruh prompt yang benar-benar dikirim belum berupa screenshot percakapan. Respons lengkap dan screenshot sumber telah disimpan, dengan ringkasan serta batas verifikasi pada docs/notebooklm-hasil.md. Locator yang belum diperiksa terhadap sumber asli diberi status belum terverifikasi.

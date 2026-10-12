@@ -43,3 +43,4 @@ Jurnal reverse_journal adalah storno operasional untuk membatalkan efek jurnal t
 ## Kesimpulan untuk jawaban 3.1b
 
 NotebookLM digunakan untuk menelaah kode final dan menghubungkan kontrol transaksi dengan pembahasan kas/setara kas. Hasilnya mendukung ketersediaan kontrol yang relevan pada prototipe, sekaligus menunjukkan perlunya penilaian master akun secara manual. Sistem tidak diklaim sepenuhnya patuh PSAK hanya berdasarkan keseimbangan atau checksum. Pengakuan dan klasifikasi instrumen, otorisasi, bukti pembayaran, dan laporan keuangan lengkap memerlukan penilaian tambahan.
+

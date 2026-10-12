@@ -1,6 +1,6 @@
 # UTS Coding Akuntansi
 
-Tahap saat ini: SQL nomor 1–2, backend nomor 3, serta hasil Gemini Canvas yang sudah ditinjau dan diperbaiki. Bukti asli pada evidence/gemini/, prompt aktual pada docs/prompt-ai.md. NotebookLM, login/UI browser, dan PDF final masih diperlukan.
+Tahap saat ini: SQL nomor 1–2, backend nomor 3, hasil Gemini Canvas yang diperbaiki, dan penilaian kode melalui NotebookLM. Bukti pada evidence/gemini/ dan evidence/notebooklm/; prompt dan tinjauan manual pada docs/. Login/UI browser dan PDF final masih perlu diselesaikan.
 
 Urutan SQL pada PostgreSQL/Supabase proyek tugas kosong:
 
@@ -17,4 +17,4 @@ Form Canvas: `npm ci`, `npm run build`, `npm run preview`, buka http://localhost
 
 Frontend pemeriksaan audit/pembalik pada frontend/ tetap tersedia dengan cara menjalankan yang tercantum dalam docs/soal-3.md. `npm test` menjalankan assertion nominal serta aturan voucher. Kredensial tidak disimpan di repo.
 
-Rencana lanjutan: uji browser/login dan concurrency terkontrol, verifikasi NotebookLM, kemudian PDF.
+Rencana lanjutan: uji browser/login dan concurrency terkontrol, kemudian PDF. Verifikasi AI tidak merupakan sertifikasi kepatuhan penuh PSAK; batas penilaian tercatat pada docs/notebooklm-hasil.md.
