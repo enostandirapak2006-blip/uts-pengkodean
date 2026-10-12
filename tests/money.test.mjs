@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {cents,totals} from '../frontend/money.mjs';
+assert.equal(cents('0.10')+cents('0.20'),30n);
+assert.equal(cents('1.001'),null);
+assert.equal(cents('-1'),null);
+assert.equal(cents('NaN'),null);
+assert.equal(cents('1000000000000000.01'),100000000000000001n);
+assert.equal(totals([{account_id:'1',debit:'0.1',credit:'0'},{account_id:'2',debit:'0.2',credit:'0'},{account_id:'3',debit:'0',credit:'0.3'}]).valid,true);
+assert.equal(totals([{account_id:'1',debit:'0',credit:'0'},{account_id:'2',debit:'0',credit:'0'}]).valid,false);
+assert.equal(totals([{account_id:'1',debit:'100',credit:'0'},{account_id:'2',debit:'0',credit:'99'}]).valid,false);
+console.log('PASS money precision and balance assertions');
