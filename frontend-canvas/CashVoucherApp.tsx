@@ -19,7 +19,7 @@ export default function App() {
 
   /* Supabase Connection Config State */
   const supabaseUrl = 'https://gkcklzfvwwvzfxcrgmav.supabase.co';
-  const [supabaseAnonKey, setSupabaseAnonKey] = useState('');
+  const [supabaseAnonKey, setSupabaseAnonKey] = useState(globalThis.APP_CONFIG?.publishableKey || '');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitResult, setSubmitResult] = useState(null);
   const [showConfig, setShowConfig] = useState(true);
